@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heimdal"
+version = "0.1.0" # 必要に応じてバージョンを変更してください
+description = "File/Directory Zip Compression and AES Encryption Tool"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "cryptography>=3.0",
+]
+
+[project.scripts]
+heimdal = "heimdal.heimdal:main"
+
+[project.urls]
+"Homepage" = "https://github.com/mallocfree009/heimdal" # 必要に応じてリポジトリURLを変更してください
+"Bug Tracker" = "https://github.com/mallocfree009/heimdal/issues" # 必要に応じてIssue Tracker URLを変更してください
+
+[tool.setuptools]
+packages = ["heimdal"]
