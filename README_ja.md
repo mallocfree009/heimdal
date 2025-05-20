@@ -10,17 +10,47 @@ Heimdalはディレクトリ全体を１つの暗号化されたファイルに�
 - キーファイルまたはパスワードによる暗号化
 - キーファイルのパスワードからの生成、またはランダム生成
 
+## 使用例
+
+```sh
+# インストール
+$ pip install git+https://github.com/mallocfree009/heimdal.git
+
+# パスワードのみでtestdataディレクトリを暗号化
+$ heimdal encode testdata testdata2.hmd                  
+Enter password: 
+Confirm password:
+Generated IV and Key from password.
+Directory 'testdata' compressed to 'testdata.temp.zip'.
+Data encrypted and saved to 'testdata2.hmd'.
+
+# パスワードのみでファイルtestdata2.hmdを復号
+$ heimdal decode testdata2.hmd output2   
+Enter password: 
+Confirm password:
+Generated Key from password.
+Zip file 'testdata2.hmd.temp.zip' extracted to 'output2'.
+
+# パスワードからキーファイルを生成
+$ heimdal genkey test_key_pass.json
+Enter password: 
+Confirm password:
+Generated IV and Key from password.
+Generated IV and Key and saved to 'test_key_pass.json' in JSON format.
+
+# または、パスワードを使わないでキーファイルをランダム生成 
+$ heimdal genkey --random test_key.json
+
+# キーファイルを使ってtestdataディレクトリをtestdata.hmdファイルに暗号化
+$ heimdal encode -k test_key.json testdata testdata.hmd 
+
+# キーファイルを使ってtestdata.hmdファイルからoutputディレクトリに復号化
+$ heimdal decode -k test_key.json testdata.hmd output
+```
+
 ---
 
 ## 使い方
-
-### インストール
-
-以下のコマンドでインストールできます。
-
-```bash
-pip install git+https://github.com/mallocfree009/heimdal.git
-```
 
 ### 基本的な使い方
 

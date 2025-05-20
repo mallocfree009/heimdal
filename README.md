@@ -10,6 +10,44 @@ It has the following features:
 - Encryption using a key file or password.
 - Key file generation from a password or random generation.
 
+## Usage Examples
+
+```sh
+# Install
+$ pip install git+https://github.com/mallocfree009/heimdal.git
+
+# Encrypt testdata directory using only a password
+$ heimdal encode testdata testdata2.hmd                  
+Enter password: 
+Confirm password:
+Generated IV and Key from password.
+Directory 'testdata' compressed to 'testdata.temp.zip'.
+Data encrypted and saved to 'testdata2.hmd'.
+
+# Decrypt testdata2.hmd file using only a password
+$ heimdal decode testdata2.hmd output2   
+Enter password: 
+Confirm password:
+Generated Key from password.
+Zip file 'testdata2.hmd.temp.zip' extracted to 'output2'.
+
+# Generate a key file from a password
+$ heimdal genkey test_key_pass.json
+Enter password: 
+Confirm password:
+Generated IV and Key from password.
+Generated IV and Key and saved to 'test_key_pass.json' in JSON format.
+
+# Or, generate a key file randomly without using a password
+$ heimdal genkey --random test_key.json
+
+# Encrypt testdata directory to testdata.hmd file using a key file
+$ heimdal encode -k test_key.json testdata testdata.hmd 
+
+# Decrypt from testdata.hmd file to output directory using a key file
+$ heimdal decode -k test_key.json testdata.hmd output
+```
+
 ---
 
 ## Usage
