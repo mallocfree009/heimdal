@@ -2,6 +2,8 @@
 
 [English](README.md) | [日本語](README_ja.md)
 
+[Notice] I may not be able to respond to pull requests or other contributions for this project. Everything depends on the developer's motivation, state of mind, and free time...
+
 Heimdal is a tool that converts an entire directory into a single encrypted file.
 It has the following features:
 
