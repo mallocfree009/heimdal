@@ -2,7 +2,9 @@
 
 [English](README.md) | [日本語](README_ja.md)
 
-[Notice] I may not be able to respond to pull requests or other contributions for this project. Everything depends on the developer's motivation, state of mind, and free time...
+**[Notice] I may not be able to respond to pull requests or other contributions for this project. Everything depends on the developer's motivation, state of mind, and free time...**
+
+**[Notice] This software is distributed under the MIT license and comes with no warranty; the developer is not responsible. Please check the LICENSE for details.**
 
 Heimdal is a tool that converts an entire directory into a single encrypted file.
 It has the following features:
