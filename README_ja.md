@@ -1,5 +1,7 @@
 # Heimdal - ディレクトリ暗号化ツール
 
+[English](README.md) | [日本語](README_ja.md)
+
 Heimdalはディレクトリ全体を１つの暗号化されたファイルに変換するツールです。
 以下の機能があります
 

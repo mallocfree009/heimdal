@@ -1,5 +1,7 @@
 # Heimdal - Directory Encryption Tool
 
+[English](README.md) | [日本語](README_ja.md)
+
 Heimdal is a tool that converts an entire directory into a single encrypted file.
 It has the following features:
 
