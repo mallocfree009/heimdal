@@ -6,6 +6,8 @@
 
 **[Notice] This software is distributed under the MIT license and comes with no warranty; the developer is not responsible. Please check the LICENSE for details.**
 
+![Directory Encryption Tool](res/img.webp)
+
 Heimdal is a tool that converts an entire directory into a single encrypted file.
 It has the following features:
 
